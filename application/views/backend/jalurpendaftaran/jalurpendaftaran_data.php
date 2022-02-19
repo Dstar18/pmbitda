@@ -26,9 +26,9 @@
                     <div class="card">
                         <!-- Navbar Content -->
                         <div class="card-header">
-                            <h3 class="card-title">Data Petugas</h3>
+                            <h3 class="card-title">Data Jalur Pendaftaran</h3>
                             <div class="card-tools">
-                                <a href="<?= base_url('admin/Petugas/tambah')?>">
+                                <a href="<?= base_url('admin/JalurPendaftaran/tambah')?>">
                                 <button type="button" class="btn btn-block btn-primary">
                                     Tambah Data
                                 </button>
@@ -42,13 +42,8 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>NIP</th>
-                                        <th>Nama</th>
-                                        <th>Email</th>
-                                        <th>NoHP</th>
-                                        <th>User</th>
-                                        <th>Password</th>
-                                        <th>Level</th>
+                                        <th>Judul</th>
+                                        <th>Keterangan Judul</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -56,32 +51,22 @@
 
                                 <?php
                                     $i = 1;
-                                    foreach($dataPetugas as $rowPetugas){?>
+                                    foreach($dataJalur as $rowJ){?>
                                     <tr>
                                         <td><?=$i++?></td>
-                                        <td><?=$rowPetugas->nip_petugas?></td>
-                                        <td><?=$rowPetugas->nama_petugas?></td>
-                                        <td><?=$rowPetugas->email_petugas?></td>
-                                        <td><?=$rowPetugas->nohp_petugas?></td>
-                                        <td><?=$rowPetugas->username_petugas?></td>
-                                        <td><?=$rowPetugas->password_petugas?></td>
-                                        
-                                        <?php if($rowPetugas->level_petugas == 1){ ?>
-                                            <td class=" ">Admin</td>
-                                        <?php }else if($rowPetugas->level_petugas == 2){ ?>
-                                            <td class=" ">Conter</td>
-                                        <?php } else if($rowPetugas->level_petugas == 3){ ?>
-                                            <td class=" ">Prodi</td>
-                                        <?php } else if($rowPetugas->level_petugas == 4){?>
-                                            <td class=" ">Keuangan</td>
-                                        <?php } ?>
+                                        <td><?=$rowJ->judul_jalurPendaftaran?></td>
+                                        <td><?=$rowJ->ketJudul_jalurPendaftaran?></td>
 
                                         <td>
-                                            <a href="<?= base_url('admin/Petugas/edit/'.$rowPetugas->id_petugas)?>">
+                                            <a href="<?= base_url('admin/JalurPendaftaran/view/'.$rowJ->id_jalurPendaftaran)?>">
+                                                <button class="btn btn-sm btn-success" id="btn-lihat">View</button>
+                                            </a>
+
+                                            <a href="<?= base_url('admin/JalurPendaftaran/edit/'.$rowJ->id_jalurPendaftaran)?>">
                                                 <button class="btn btn-sm btn-warning" id="btn-lihat">Edit</button>
                                             </a>
                                             
-                                            <a href="<?= base_url('admin/Petugas/hapus/'.$rowPetugas->id_petugas)?>" onclick="return confirm('Anda yakin mau menghapus data ini ?')">
+                                            <a href="<?= base_url('admin/JalurPendaftaran/hapus/'.$rowJ->id_jalurPendaftaran)?>" onclick="return confirm('Anda yakin mau menghapus halaman ini ?')">
                                                 <button class="btn btn-sm btn-danger" id="btn-delete">Delete</button>
                                             </a>
                                         </td>
@@ -90,6 +75,12 @@
                                 </tbody>
                             </table>
                         </div>
+                        <!-- /Page Content -->
+                        <!-- Footer Content -->
+                        <!-- <div class="card-footer">
+                            Footer
+                        </div> -->
+                        <!-- /Footer Content -->
                     </div>
                 </section>   
             </div>

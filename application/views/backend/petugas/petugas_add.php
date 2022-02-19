@@ -67,6 +67,16 @@
                                                 <input type="text" name="password_petugas" class="form-control" required>
                                             </div>
 
+                                            <div class="form-group">
+                                                <label>Level</label>
+                                                <select class="custom-select" name="level_petugas">
+                                                    <option value="1">Admin</option>
+                                                    <option value="2">Conter</option>
+                                                    <option value="3">Prodi</option>
+                                                    <option value="4">Keuangan</option>
+                                                </select>
+                                            </div>
+
                                            
                                         </div>
                                         <div class="card-footer">

@@ -109,6 +109,10 @@
                                             <label for="tiktok_pengaturan">Link Tiktok</label>
                                             <input type="text" id="tiktok_pengaturan" name="tiktok_pengaturan" value="<?=$rowPengaturan->tiktok_pengaturan?>" class="form-control" readonly>
                                         </div>
+                                        <div class="form-group">
+                                            <label for="tiktok_pengaturan">Link YouTube</label>
+                                            <input type="text" id="youtube_pengaturan" name="youtube_pengaturan" value="<?=$rowPengaturan->youtube_pengaturan?>" class="form-control" readonly>
+                                        </div>
                                     </div>  
                                 </div>
                             </div>

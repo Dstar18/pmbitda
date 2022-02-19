@@ -6,13 +6,14 @@ class Dashboard extends CI_Controller{
     function __construct(){
         parent::__construct();
         check_not_petugas();
-        $this->load->model(['Berita_m','Halaman_m','Unggah_m']);
+        $this->load->model(['InfoPendaftaran_m','JalurPendaftaran_m','Pengumuman_m','Unggah_m']);
     }
 
     public function index()
     {
-        $data['dataBerita'] = $this->Berita_m->getCountBerita()->row();
-        $data['dataHalaman'] = $this->Halaman_m->getCountHalaman()->row();
+        $data['dataInfo'] = $this->InfoPendaftaran_m->getCountInfoPendaftaran()->row();
+        $data['dataJalur'] = $this->JalurPendaftaran_m->getCountJalurPendaftaran()->row();
+        $data['dataPengumuman'] = $this->Pengumuman_m->getCountPengumuman()->row();
         $data['dataUnggah'] = $this->Unggah_m->getCountUnggah()->row();
         $this->load->view('backend/dashboard/index', $data); 
     }

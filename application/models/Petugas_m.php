@@ -35,6 +35,7 @@ class Petugas_m extends CI_Model{
             'nohp_petugas'          => $post['nohp_petugas'],
             'username_petugas'      => $post['username_petugas'],
             'password_petugas'      => $post['password_petugas'],
+            'level_petugas'         => $post['level_petugas'],
         );
         $query = $this->db->insert('tb_petugas', $params);
         return $query;
@@ -48,6 +49,7 @@ class Petugas_m extends CI_Model{
             'nohp_petugas'          => $post['nohp_petugas'],
             'username_petugas'      => $post['username_petugas'],
             'password_petugas'      => $post['password_petugas'],
+            'level_petugas'         => $post['level_petugas'],
         );
         $this->db->where('id_petugas', $post['id_petugas']);
         $query = $this->db->update('tb_petugas', $parse);

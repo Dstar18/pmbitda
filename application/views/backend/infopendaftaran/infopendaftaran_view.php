@@ -28,16 +28,16 @@
                     <div class="col-md-12">
                         <div class="card card-primary card-outline">
                             <div class="card-header">
-                                <h3 class="card-title">Read Halaman</h3>
+                                <h3 class="card-title">Read Info Pendaftarna</h3>
                             </div>
                             <div class="card-body p-0">
                                 <div class="mailbox-read-info">
-                                    <center><h5><?=$dataHalaman->judul_halaman?></h5></center>
+                                    <center><h5><?=$dataInfo->judul_infoPendaftaran?></h5></center>
 
                                 </div>
                                 <div class="mailbox-read-message">
-                                    <center><?=$dataHalaman->ketjudul_halaman?></center>
-                                    <?=$dataHalaman->konten_halaman?>
+                                    <center><?=$dataInfo->ketjudul_infoPendaftaran?></center>
+                                    <?=$dataInfo->konten_infoPendaftaran?>
                                 </div>
                             </div>
                         </div>

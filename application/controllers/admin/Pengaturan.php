@@ -56,6 +56,7 @@ class Pengaturan extends CI_Controller{
             'ig_pengaturan'             => $post['ig_pengaturan'],
             'fb_pengaturan'             => $post['fb_pengaturan'],
             'tiktok_pengaturan'         => $post['tiktok_pengaturan'],
+            'youtube_pengaturan'        => $post['youtube_pengaturan'],
         );
         $this->Pengaturan_m->editPengaturan($parse);
         if($this->db->affected_rows()>0){

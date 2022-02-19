@@ -26,9 +26,9 @@
                     <div class="card">
                         <!-- Navbar Content -->
                         <div class="card-header">
-                            <h3 class="card-title">Data Berita</h3>
+                            <h3 class="card-title">Data Info Pendaftaran</h3>
                             <div class="card-tools">
-                                <a href="<?= base_url('admin/Berita/tambah')?>">
+                                <a href="<?= base_url('admin/InfoPendaftaran/tambah')?>">
                                 <button type="button" class="btn btn-block btn-primary">
                                     Tambah Data
                                 </button>
@@ -42,10 +42,8 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Date Insert</th>
-                                        <th>Judul Berita</th>
-                                        <th>Nama Petugas</th>
-                                        <th>Status</th>
+                                        <th>Judul</th>
+                                        <th>Keterangan Judul</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -53,33 +51,22 @@
 
                                 <?php
                                     $i = 1;
-                                    foreach($dataBerita as $rowBerita){?>
+                                    foreach($dataInfo as $rowInfo){?>
                                     <tr>
                                         <td><?=$i++?></td>
-                                        <td><?=$rowBerita->date_insert_berita?></td>
-                                        <td><?=$rowBerita->judul_berita?></td>
-                                        <?php
-                                            foreach($dataPetugas as $rowPetugas){
-                                                if($rowBerita->id_petugas_berita == $rowPetugas->id_petugas){?>
-                                                    <td><?=$rowPetugas->nama_petugas?></td>
-                                        <?php  } } ?>
-                                        
-                                        <?php if($rowBerita->status_berita == 1){ ?>
-                                            <td class=" ">Publish</td>
-                                        <?php }else if($rowBerita->status_berita == 2){ ?>
-                                            <td class=" ">Draft</td>
-                                        <?php } ?>
+                                        <td><?=$rowInfo->judul_infoPendaftaran?></td>
+                                        <td><?=$rowInfo->ketjudul_infoPendaftaran?></td>
 
                                         <td>
-                                            <a href="<?= base_url('admin/Berita/view/'.$rowBerita->id_berita)?>">
+                                            <a href="<?= base_url('admin/InfoPendaftaran/view/'.$rowInfo->id_infoPendaftaran)?>">
                                                 <button class="btn btn-sm btn-success" id="btn-lihat">View</button>
                                             </a>
 
-                                            <a href="<?= base_url('admin/Berita/edit/'.$rowBerita->id_berita)?>">
+                                            <a href="<?= base_url('admin/InfoPendaftaran/edit/'.$rowInfo->id_infoPendaftaran)?>">
                                                 <button class="btn btn-sm btn-warning" id="btn-lihat">Edit</button>
                                             </a>
                                             
-                                            <a href="<?= base_url('admin/Berita/hapus/'.$rowBerita->id_berita)?>" onclick="return confirm('Anda yakin mau menghapus berita ini ?')">
+                                            <a href="<?= base_url('admin/InfoPendaftaran/hapus/'.$rowInfo->id_infoPendaftaran)?>" onclick="return confirm('Anda yakin mau menghapus halaman ini ?')">
                                                 <button class="btn btn-sm btn-danger" id="btn-delete">Delete</button>
                                             </a>
                                         </td>

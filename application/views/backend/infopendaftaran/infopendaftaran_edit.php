@@ -24,28 +24,28 @@
 
             <!-- Main Content -->
             <section class="content">
-                <form action="<?=base_url('admin/Halaman/editHalaman')?>" enctype="multipart/form-data" method="POST">
+                <form action="<?=base_url('admin/InfoPendaftaran/editInfoPendaftaran')?>" enctype="multipart/form-data" method="POST">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-9">
                             <div class="card card-primary card-outline">
                                 <div class="card-header">
-                                    <h3 class="card-title">Edit Halaman</h3>
+                                    <h3 class="card-title">Edit Info Pendaftaran</h3>
                                 </div>
                                 <div class="card-body">
 
-                                        <input type="hidden" id="idHalaman" name="idHalaman" class="form-control" value="<?=$dataHalaman->id_halaman?>" readonly>
+                                        <input type="hidden" id="IDInfoPendaftaran" name="IDInfoPendaftaran" class="form-control" value="<?=$dataInfo->id_infoPendaftaran?>" readonly>
 
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="judulHalaman" placeholder="Judul Halaman" value="<?=$dataHalaman->judul_halaman?>" required>
+                                        <input type="text" class="form-control" name="judulInfoPendaftaran" placeholder="Judul Halaman" value="<?=$dataInfo->judul_infoPendaftaran?>" required>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="ketjudulHalaman" placeholder="keterangan Judul" value="<?=$dataHalaman->ketjudul_halaman?>" required>
+                                        <input type="text" class="form-control" name="ketjudulInfoPendaftaran" placeholder="keterangan Judul" value="<?=$dataInfo->ketjudul_infoPendaftaran?>" required>
                                     </div>
 
                                     <div class="form-group">
-                                        <textarea name="kontenHalaman" id="compose-textarea" class="form-control" style="height: 300px"><?=$dataHalaman->konten_halaman?></textarea>
+                                        <textarea name="kontenInfoPendaftaran" id="compose-textarea" class="form-control" style="height: 300px"><?=$dataInfo->konten_infoPendaftaran?></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -54,7 +54,7 @@
                             <div class="card card-primary card-outline">
                                 <div class="card-body">
 
-                                    <a href="<?= base_url('admin/Halaman')?>">
+                                    <a href="<?= base_url('admin/InfoPendaftaran')?>">
                                         <button type="button" class="btn btn-danger btn-block">Cancel</button>
                                     </a><p></p>                                    
                                     <button type="submit" class="btn btn-primary btn-block">Submit</button>

@@ -25,19 +25,27 @@
                     </a>
                 </li>
 
-                <!-- Menu Berita -->
+                <!-- Menu Jalur Pendaftaran -->
                 <li class="nav-item">
-                    <a href="<?= base_url('admin/Berita')?>" class="nav-link">
-                        <i class="nav-icon fas fa-edit"></i>
-                        <p>Berita</p>
+                    <a href="<?= base_url('admin/JalurPendaftaran')?>" class="nav-link">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>Jalur Pendaftaran</p>
                     </a>
                 </li>
 
-                <!-- Menu Halaman -->
+                <!-- Menu Info Pendaftaran -->
                 <li class="nav-item">
-                    <a href="<?= base_url('admin/Halaman')?>" class="nav-link">
+                    <a href="<?= base_url('admin/InfoPendaftaran')?>" class="nav-link">
                         <i class="nav-icon fas fa-book"></i>
-                        <p>Halaman</p>
+                        <p>Info Pendaftaran</p>
+                    </a>
+                </li>
+
+                <!-- Menu Pengumuman -->
+                <li class="nav-item">
+                    <a href="<?= base_url('admin/Pengumuman')?>" class="nav-link">
+                        <i class="nav-icon fas fa-edit"></i>
+                        <p>Pengumuman</p>
                     </a>
                 </li>
 

@@ -103,6 +103,11 @@
                                                 <input type="text" id="tiktok_pengaturan" name="tiktok_pengaturan" value="<?=$dataPengaturan->tiktok_pengaturan?>" class="form-control">
                                             </div>
 
+                                            <div class="form-group">
+                                                <label for="tiktok_pengaturan">Link YouTube</label>
+                                                <input type="text" id="youtube_pengaturan" name="youtube_pengaturan" value="<?=$dataPengaturan->youtube_pengaturan?>" class="form-control">
+                                            </div>
+
                                            
                                         </div>
                                         <div class="card-footer">

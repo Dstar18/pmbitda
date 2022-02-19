@@ -28,25 +28,29 @@
                     <div class="col-md-12">
                         <div class="card card-primary card-outline">
                             <div class="card-header">
-                                <h3 class="card-title">Read Berita</h3>
+                                <h3 class="card-title">Read Pengumuman</h3>
                                 <div class="card-tools">
-                                    <?php if($dataBerita->status_berita == 1){ ?>
+                                    <?php if($dataPengumuman->status_pgm == 1){ ?>
                                         <button class="btn-sm-xs btn-primary">Publish</button>
-                                    <?php }else if($dataBerita->status_berita == 2){ ?>
+                                    <?php }else if($dataPengumuman->status_pgm == 2){ ?>
                                         <button class="btn-sm-xs btn-warning">Draft</button>
                                     <?php } ?>
                                 </div>
                             </div>
                             <div class="card-body p-0">
                                 <div class="mailbox-read-info">
-                                    <h5><?=$dataBerita->judul_berita?></h5>
-                                    <h6><?=$dataBerita->nama_petugas?>
-                                        <span class="mailbox-read-time float-right"><?=$dataBerita->date_insert_berita?></span><br>
-                                        <span class="mailbox-read-time float-right"><?=$dataBerita->date_update_berita?></span>
+                                    <h5><?=$dataPengumuman->judul_pgm?></h5>
+                                    <h5><?=$dataPengumuman->ketJudul_pgm?></h5>
+                                    <h6><?=$dataPengumuman->nama_petugas?>
+                                        <span class="mailbox-read-time float-right"><?=$dataPengumuman->date_insert_pgm?></span><br>
+                                        <span class="mailbox-read-time float-right"><?=$dataPengumuman->date_update_pgm?></span>
                                     </h6>
                                 </div>
                                 <div class="mailbox-read-message">
-                                    <?=$dataBerita->konten_berita?>
+                                    <center>
+                                        <img src="<?= base_url()?>upload/coverpengumuman/<?=$dataPengumuman->cover_pgm?>" width="450" height="275">
+                                    </center>
+                                    <?=$dataPengumuman->konten_pgm?>
                                 </div>
                             </div>
                         </div>

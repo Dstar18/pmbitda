@@ -31,10 +31,10 @@
                                 <div class="col-lg-3 col-6">
                                     <div class="small-box bg-info">
                                             <div class="inner">
-                                                <h3><?=$dataBerita->total?></h3>
-                                                <p>Data Berita</p>
+                                                <h3><?=$dataInfo->total?></h3>
+                                                <p>Data Info Pendaftaran</p>
                                             </div>
-                                            <a href="<?= base_url('admin/Berita')?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                            <a href="<?= base_url('admin/InfoPendaftaran')?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                                     </div>
                                 </div>
                                 <!-- /small box 1 -->
@@ -42,16 +42,27 @@
                                 <div class="col-lg-3 col-6">
                                     <div class="small-box bg-success">
                                             <div class="inner">
-                                                <h3><?=$dataHalaman->total?></h3>
-                                                <p>Data Halaman</p>
+                                                <h3><?=$dataJalur->total?></h3>
+                                                <p>Data Jalur Pendaftaran</p>
                                             </div>
-                                            <a href="<?= base_url('admin/Halaman')?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                            <a href="<?= base_url('admin/JalurPendaftaran')?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                                     </div>
                                 </div>
                                 <!-- /small box 2 -->
                                 <!-- small box 3 -->
                                 <div class="col-lg-3 col-6">
                                     <div class="small-box bg-warning">
+                                            <div class="inner">
+                                                <h3><?=$dataPengumuman->total?></h3>
+                                                <p>Data Pengumuman</p>
+                                            </div>
+                                            <a href="<?= base_url('admin/Pengumuman')?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                                    </div>
+                                </div>
+                                <!-- /small box 3 -->
+                                <!-- small box 3 -->
+                                <div class="col-lg-3 col-6">
+                                    <div class="small-box bg-danger">
                                             <div class="inner">
                                                 <h3><?=$dataUnggah->total?></h3>
                                                 <p>Data Unggah</p>

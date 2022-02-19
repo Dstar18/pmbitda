@@ -33,6 +33,7 @@ class Pengaturan_m extends CI_Model{
             'ig_pengaturan'             => $post['ig_pengaturan'],
             'fb_pengaturan'             => $post['fb_pengaturan'],
             'tiktok_pengaturan'         => $post['tiktok_pengaturan'],
+            'youtube_pengaturan'        => $post['youtube_pengaturan'],
         );
         $this->db->where('id_pengaturan', $post['id_pengaturan']);
         $query = $this->db->update('tb_pengaturan', $parse);

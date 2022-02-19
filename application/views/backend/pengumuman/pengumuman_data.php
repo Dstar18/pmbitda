@@ -26,9 +26,9 @@
                     <div class="card">
                         <!-- Navbar Content -->
                         <div class="card-header">
-                            <h3 class="card-title">Data Halaman</h3>
+                            <h3 class="card-title">Data Pengumuman</h3>
                             <div class="card-tools">
-                                <a href="<?= base_url('admin/Halaman/tambah')?>">
+                                <a href="<?= base_url('admin/Pengumuman/tambah')?>">
                                 <button type="button" class="btn btn-block btn-primary">
                                     Tambah Data
                                 </button>
@@ -42,8 +42,10 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
+                                        <th>Date Insert</th>
                                         <th>Judul</th>
-                                        <th>Keterangan Judul</th>
+                                        <th>Nama Petugas</th>
+                                        <th>Status</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -51,22 +53,33 @@
 
                                 <?php
                                     $i = 1;
-                                    foreach($dataHalaman as $rowHalaman){?>
+                                    foreach($dataPengumuman as $rowPgm){?>
                                     <tr>
                                         <td><?=$i++?></td>
-                                        <td><?=$rowHalaman->judul_halaman?></td>
-                                        <td><?=$rowHalaman->ketjudul_halaman?></td>
+                                        <td><?=$rowPgm->date_insert_pgm?></td>
+                                        <td><?=$rowPgm->judul_pgm?></td>
+                                        <?php
+                                            foreach($dataPetugas as $rowPetugas){
+                                                if($rowPgm->id_petugas_pgm == $rowPetugas->id_petugas){?>
+                                                    <td><?=$rowPetugas->nama_petugas?></td>
+                                        <?php  } } ?>
+                                        
+                                        <?php if($rowPgm->status_pgm == 1){ ?>
+                                            <td class=" ">Publish</td>
+                                        <?php }else if($rowPgm->status_pgm == 2){ ?>
+                                            <td class=" ">Draft</td>
+                                        <?php } ?>
 
                                         <td>
-                                            <a href="<?= base_url('admin/Halaman/view/'.$rowHalaman->id_halaman)?>">
+                                            <a href="<?= base_url('admin/Pengumuman/view/'.$rowPgm->id_pgm)?>">
                                                 <button class="btn btn-sm btn-success" id="btn-lihat">View</button>
                                             </a>
 
-                                            <a href="<?= base_url('admin/Halaman/edit/'.$rowHalaman->id_halaman)?>">
+                                            <a href="<?= base_url('admin/Pengumuman/edit/'.$rowPgm->id_pgm)?>">
                                                 <button class="btn btn-sm btn-warning" id="btn-lihat">Edit</button>
                                             </a>
                                             
-                                            <a href="<?= base_url('admin/Halaman/hapus/'.$rowHalaman->id_halaman)?>" onclick="return confirm('Anda yakin mau menghapus halaman ini ?')">
+                                            <a href="<?= base_url('admin/Pengumuman/hapus/'.$rowPgm->id_pgm)?>" onclick="return confirm('Anda yakin mau menghapus berita ini ?')">
                                                 <button class="btn btn-sm btn-danger" id="btn-delete">Delete</button>
                                             </a>
                                         </td>
